@@ -1,0 +1,29 @@
+{
+    "name": "vscode-compose-template-node-server",
+    "dockerComposeFile": [
+        "../../docker-compose.yml"
+    ],
+    "service": "node-server",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/node-server",
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "donjayamanne.githistory"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+        "[json]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        }
+    }
+}

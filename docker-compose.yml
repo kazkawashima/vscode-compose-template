@@ -1,0 +1,42 @@
+version: "3"
+services:
+  ui:
+    env_file:
+      - ./ui/.env
+    build:
+      context: ./ui/.devcontainer
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+      - ui-extensions:/root/.vscode-server
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    ports:
+      - "10001:8080"
+  node-server:
+    env_file:
+      - ./node-server/.env
+    build:
+      context: ./node-server/.devcontainer
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+      - node-server-extensions:/root/.vscode-server
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    ports:
+      - "10002:3000"
+  python-server:
+    env_file:
+      - ./python-server/.env
+    build:
+      context: ./python-server/.devcontainer
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+      - python-server-extensions:/root/.vscode-server
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    ports:
+      - "10003:5000"
+volumes:
+  ui-extensions:
+  node-server-extensions:
+  python-server-extensions:
