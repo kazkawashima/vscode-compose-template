@@ -32,6 +32,9 @@
       },
       "editor.suggest.insertMode": "replace",
       "editor.tabSize": 2
+    },
+    "[markdown]": {
+      "editor.formatOnSave": false
     }
   }
 }
