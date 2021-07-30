@@ -7,7 +7,8 @@ services:
       context: ./ui/.devcontainer
       dockerfile: Dockerfile
     volumes:
-      - .:/workspace
+      - .:/workspace:cached
+      - ui-node-modules:/workspace/ui/node_modules
       - ui-extensions:/root/.vscode-server
     command: /bin/sh -c "while sleep 1000; do :; done"
     ports:
@@ -19,11 +20,14 @@ services:
       context: ./server/.devcontainer
       dockerfile: Dockerfile
     volumes:
-      - .:/workspace
+      - .:/workspace:cached
+      - server-node-modules:/workspace/server/node_modules
       - server-extensions:/root/.vscode-server
     command: /bin/sh -c "while sleep 1000; do :; done"
     ports:
       - "10002:3000"
 volumes:
+  ui-node-modules:
+  server-node-modules:
   ui-extensions:
   server-extensions:
