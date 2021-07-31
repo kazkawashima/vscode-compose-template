@@ -19,8 +19,7 @@ $ yarn
 ```
 
 ```
-$ yarn add -D eslint prettier eslint-config-prettier 
-$ yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react
+$ yarn add -D eslint prettier eslint-config-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks
 $ touch .prettierrc
 $ touch .eslintrc.json
 $ rm .gitignore
@@ -45,20 +44,12 @@ $ rm .gitignore
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "prettier"
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "rules": { "react/prop-types": "off", "react/react-in-jsx-scope": "off" }
 }
 
 ```
