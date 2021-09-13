@@ -1,8 +1,6 @@
 version: "3"
 services:
   ui:
-    env_file:
-      - ./ui/.env
     build:
       context: ./ui/.devcontainer
       dockerfile: Dockerfile
@@ -14,8 +12,6 @@ services:
     ports:
       - "10001:8080"
   server:
-    env_file:
-      - ./server/.env
     build:
       context: ./server/.devcontainer
       dockerfile: Dockerfile
