@@ -20,7 +20,6 @@
       "source.organizeImports": true,
       "source.fixAll.eslint": true
     },
-    "vetur.format.defaultFormatter.js": "none",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[json]": {
       "editor.tabSize": 2
