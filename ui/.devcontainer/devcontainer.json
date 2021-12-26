@@ -7,7 +7,7 @@
   "extensions": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "jpoissonnier.vscode-styled-components",
+    "styled-components.vscode-styled-components",
     "eamodio.gitlens",
     "mhutchie.git-graph"
   ],
