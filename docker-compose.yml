@@ -13,13 +13,10 @@ services:
     build:
       context: ./server/.devcontainer
       dockerfile: Dockerfile
-    volumes:
-      - .:/workspace:cached
-      - server-node-modules:/workspace/server/node_modules
-      - server-extensions:/root/.vscode-server/extensions
     command: /bin/sh -c "while sleep 1000; do :; done"
+    entrypoint: "npm start"
+    ports:
+      - "8080:8080"
 volumes:
   ui-node-modules:
-  server-node-modules:
   ui-extensions:
-  server-extensions:
