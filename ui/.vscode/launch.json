@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "Attach to chrome",
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "attach",
       "port": 9222,
       "urlFilter": "http://localhost:3000/*",
