@@ -1,5 +1,7 @@
-# vscode-compose-template
+# vscode-compose-template-node
 VS Code Remote Containersのフロントエンド開発環境用テンプレート
 
-## 使い方
+## ベース使い方の話
 https://zenn.dev/leftletter/articles/0969dcef061ff8
+
+modified
