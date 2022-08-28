@@ -13,4 +13,4 @@ add node-gyp, gcloud SDK, firebase-tools, jre
 1. gcloud login
 2. firebase login
 3. cd ./ui
-4. 既存プロジェクトgit clone～ or git init~ nuxt/reactして
+4. 既存プロジェクトgit clone～ or nuxt/reactして
